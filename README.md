@@ -2,6 +2,7 @@
 
 - Docker化してないので、MySQL入れてください。
   - 参考: https://prograshi.com/framework/laravel/connect-to-mysql/
+  - DB名は、referral_app
 - (必要あれば).envのDBユーザー名とパスワードを修正してください
   - DB_USERNAME=root
   - DB_PASSWORD=secret
