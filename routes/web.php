@@ -17,6 +17,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/saas/top', function () {
+    return view('saas_top');
+});
+
 Route::get('/referer/top', function () {
     return view('referer_top');
 });
