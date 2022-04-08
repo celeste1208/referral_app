@@ -1,0 +1,67 @@
+// ------------------------------------------------------
+// px 単位での padding, margin 調整用class
+// ------------------------------------------------------
+// 指定するmarginの範囲を定義
+$adjust-min: 0;
+$adjust-max: 120;
+@for $i from $adjust-min through $adjust-max {
+  .mt#{$i} {
+    margin-top: #{$i}px !important;
+  }
+
+  .mr#{$i} {
+    margin-right: #{$i}px !important;
+  }
+
+  .mb#{$i} {
+    margin-bottom: #{$i}px !important;
+  }
+
+  .ml#{$i} {
+    margin-left: #{$i}px !important;
+  }
+
+  .mrl#{$i} {
+    margin-left: #{$i}px !important;
+    margin-right: #{$i}px !important;
+  }
+
+  .mtb#{$i} {
+    margin-bottom: #{$i}px !important;
+    margin-top: #{$i}px !important;
+  }
+
+  .mAll#{$i} {
+    margin: #{$i}px !important;
+  }
+
+  .pt#{$i} {
+    padding-top: #{$i}px !important;
+  }
+
+  .pr#{$i} {
+    padding-right: #{$i}px !important;
+  }
+
+  .pb#{$i} {
+    padding-bottom: #{$i}px !important;
+  }
+
+  .pl#{$i} {
+    padding-left: #{$i}px !important;
+  }
+
+  .prl#{$i} {
+    padding-left: #{$i}px !important;
+    padding-right: #{$i}px !important;
+  }
+
+  .ptb#{$i} {
+    padding-bottom: #{$i}px !important;
+    padding-top: #{$i}px !important;
+  }
+
+  .pAll#{$i} {
+    padding: #{$i}px !important;
+  }
+}

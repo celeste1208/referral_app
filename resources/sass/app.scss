@@ -1,8 +1,16 @@
-// Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+// foundations
+@import 'foundations/variables';
+@import 'foundations/normalize';
+@import 'foundations/base';
+@import 'foundations/mixins';
+@import 'foundations/utility';
 
-// Variables
-@import 'variables';
 
-// Bootstrap
-@import '~bootstrap/scss/bootstrap';
+
+
+//components
+
+
+.hoge {
+  color: $color-gray-2;
+}

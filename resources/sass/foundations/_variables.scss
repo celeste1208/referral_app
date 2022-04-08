@@ -1,0 +1,57 @@
+// Body
+$body-bg: #f8fafc;
+
+// Typography
+$font-family-sans-serif: "Nunito", sans-serif;
+$line-height-base: 1.6;
+$line-height-post-form: 1.5;
+
+// Colors
+$color-gray-1: #333;
+$color-gray-2: #777;
+$color-gray-3: #BBB;
+$color-gray-4: #DDD;
+$color-gray-5: #F8F8F8;
+$color-gray-6: #1c2e36;
+$color-gray-7: #F2F2F2;
+$color-gray-8: #F6F6f6;
+$color-gray-9: #CCC;
+$color-gray-10: #999;
+
+$color-white-1: #FFF;
+
+$color-red-1: #F53E3E;
+
+$color-black-alpha-1: rgba(0, 0, 0, .5);
+$color-black-alpha-2: rgba(0, 0, 0, .25);
+
+$color-white-alpha-1: rgba(255, 255, 255, .7);
+
+//service-color
+
+// Font Sizes
+$font-size-ss: 10;
+$font-size-s: 12;
+$font-size-1: 14;
+$font-size-2: 16;
+$font-size-3: 18;
+$font-size-4: 22;
+$font-size-5: 26;
+$font-size-6: 30;
+$font-size-7: 36;
+
+//box-shadow
+$box-shadow-1: 0 2px 8px 0 rgba(0,0,0,.12);
+$box-shadow-2: 0 4px 8px 0 rgba(0,0,0,.15);
+$box-shadow-3: 0 3px 12px 0 rgba(0,0,0,.25);
+$box-shadow-4: 0 -2px 4px 0 rgba(0,0,0,.2);
+$box-shadow-5: 0 0 12px 0 rgba(0,0,0,.12);
+
+//z-index ASC
+$c-info: 100;
+$c-nav: 1000;
+$c-header: 1000;
+$c-header-root: 10000;
+$c-modal: 10000;
+$c-toast: 10000;
+$c-loader: 100000;

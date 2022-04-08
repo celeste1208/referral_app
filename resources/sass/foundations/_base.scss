@@ -1,0 +1,31 @@
+html {
+  font-size: 62.5% !important;
+  counter-reset: number 0;
+  overflow-x: inherit !important;
+
+  li {
+    list-style: none;
+  }
+
+  body,
+  button,
+  input,
+  select,
+  textarea {
+    color: $color-gray-1;
+    font-family: 'Helvetica','Yu Gothic Medium',YuGothic,'Yu Gothic',system-ui,sans-serif;
+  }
+  @media all and (-ms-high-contrast: none) {
+    body,
+    button,
+    input,
+    select,
+    textarea {
+      font-family: "メイリオ",Meiryo,'Helvetica','Yu Gothic Medium',YuGothic,'Yu Gothic',sans-serif;
+    }
+  }
+
+  em {
+    font-style: normal;
+  }
+}

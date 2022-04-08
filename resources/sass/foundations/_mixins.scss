@@ -1,0 +1,5 @@
+//rem 変換
+@mixin font-size($size) {
+  font-size: $size * 1px; // IE
+  font-size: $size * .1rem;
+}
