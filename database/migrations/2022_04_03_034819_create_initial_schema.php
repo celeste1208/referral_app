@@ -16,6 +16,7 @@ class CreateInitialSchema extends Migration
         Schema::create('campaigns', function (Blueprint $table) {
             $table->id();
             $table->foreignId('account_id')->nullable()->constrained();
+            $table->integer('lp_access_count');
             $table->timestamps();
         });
 
