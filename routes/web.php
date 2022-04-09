@@ -34,3 +34,14 @@ Route::post('/referral/register', 'Referral\RegisterController@store');
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/campaign', [App\Http\Controllers\CampaignController::class, 'index']);
+Route::get('/campaign/show', [App\Http\Controllers\CampaignController::class, 'show']);
+Route::get('/campaign/show/tag', [App\Http\Controllers\CampaignController::class, 'tag']);
+Route::get('/campaign/create', [App\Http\Controllers\CampaignController::class, 'create']);
+
+Route::get('/conversion', [App\Http\Controllers\ConversionController::class, 'index']);
+Route::get('/conversion/show', [App\Http\Controllers\ConversionController::class, 'show']);
+Route::get('/conversion/create', [App\Http\Controllers\ConversionController::class, 'create']);
+
+Route::get('/referer', [App\Http\Controllers\RefererController::class, 'index']);
