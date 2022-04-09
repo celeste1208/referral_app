@@ -21,6 +21,7 @@
         </style>
     </head>
     <body class="antialiased">
+        <script type="text/javascript" id="" src="http://127.0.0.1:8000/js/tag.js"></script>
         Saasトップページ<br><br>
         <a href="/referer/top">紹介用ポップアップリンク</a>
     </body>
