@@ -22,7 +22,7 @@
     </head>
     <body class="antialiased">
         あなたのプロモーションコード: {{ $promotion_code }}<br>
-        <a href="https://twitter.com/intent/tweet?text=このサービスまじでおすすめ%0a登録時にプロモーションコード入れると特典あるぞ%0aコード: {{$promotion_code}}%0a&url=http://127.0.0.1:8000/referral/top">
+        <a href="https://twitter.com/intent/tweet?text=このサービスまじでおすすめ%0a登録時にプロモーションコード入れると特典あるぞ%0aコード: {{$promotion_code}}%0aLPサイト:http://127.0.0.1:8000/referral/lp%0a&url=http://127.0.0.1:8000/referral/top">
             Twitterへ投稿
         </a>
     </body>

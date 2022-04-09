@@ -31,6 +31,8 @@ Route::get('/referral/top', function () {
 });
 Route::post('/referral/register', 'Referral\RegisterController@store');
 
+Route::post('/referral/lp', 'Referral\LpController@store');
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
