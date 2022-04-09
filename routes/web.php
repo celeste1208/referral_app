@@ -31,7 +31,7 @@ Route::get('/referral/top', function () {
 });
 Route::post('/referral/register', 'Referral\RegisterController@store');
 
-Route::post('/referral/lp', 'Referral\LpController@store');
+Route::get('/referral/lp', 'Referral\LpController@store');
 
 Auth::routes();
 
