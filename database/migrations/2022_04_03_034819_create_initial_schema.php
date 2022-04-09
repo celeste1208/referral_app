@@ -13,9 +13,15 @@ class CreateInitialSchema extends Migration
      */
     public function up()
     {
-        Schema::create('referers', function (Blueprint $table) {
+        Schema::create('campaigns', function (Blueprint $table) {
             $table->id();
             $table->foreignId('account_id')->nullable()->constrained();
+            $table->timestamps();
+        });
+
+        Schema::create('referers', function (Blueprint $table) {
+            $table->id();
+            $table->foreignId('campaign_id')->nullable()->constrained();
             $table->string('email')->unique();
             $table->string('promotion_code')->unique();
             $table->timestamps();
