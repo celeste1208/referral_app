@@ -9,6 +9,8 @@
 ## Installation
 - composer install
 - php artisan serve で起動
+- npm install
+- npm run watch
 
 # URL
 

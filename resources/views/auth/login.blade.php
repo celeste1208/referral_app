@@ -5,6 +5,8 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
+                <div class="hoge">test</div>
+
                 <br>
                 Saas事業者ログイン画面<br><br>
                 <div class="card-body">
