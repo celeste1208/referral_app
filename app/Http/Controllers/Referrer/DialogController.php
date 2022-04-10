@@ -17,14 +17,14 @@ class DialogController extends Controller
     {
         $referer = Referer::where('email', $request->email)->first();
 
-        // if (!isset($referer)) {
-        //     $promotionCode = (string)Str::uuid();
-        //     $referer = new Referer();
-        //     $referer->campaign_id = 1;
-        //     $referer->email = $request->email;
-        //     $referer->promotion_code = $promotionCode;
-        //     $referer->save();
-        // }
+        if (!isset($referer)) {
+            $promotionCode = (string)Str::uuid();
+            $referer = new Referer();
+            $referer->campaign_id = 1;
+            $referer->email = $request->email;
+            $referer->promotion_code = $promotionCode;
+            $referer->save();
+        }
 
         return response()->view('referrer/dialog')
             ->header('Content-Type', 'application/javascript');
