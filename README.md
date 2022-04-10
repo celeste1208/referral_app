@@ -9,8 +9,14 @@
 ## Installation
 - composer install
 - php artisan serve で起動
+- php artisan migrate
+- php artisan db:seed --class=DatabaseSeeder
 - npm install
 - npm run watch
+
+## テストユーザー
+- メールアドレス: test@email.com
+- パスワード: test1234
 
 # URL
 

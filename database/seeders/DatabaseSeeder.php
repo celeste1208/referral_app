@@ -4,6 +4,9 @@ namespace Database\Seeders;
 
 use App\Models\Account;
 use App\Models\Campaign;
+use App\Models\User;
+use App\Models\Referer;
+
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -17,5 +20,8 @@ class DatabaseSeeder extends Seeder
     {
         Account::factory()->create();
         Campaign::factory()->state(['account_id' => 1])->create();
+        User::factory()->create();
+
+
     }
 }
