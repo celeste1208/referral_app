@@ -18,5 +18,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('button', 'ButtonController@show');
+Route::get('/banner', 'Referrer\BannerController@show');
+Route::get('/dialog', 'Referrer\DialogController@show');
+Route::post('/dialog', 'Referrer\DialogController@store');
 
