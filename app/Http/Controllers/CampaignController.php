@@ -25,12 +25,7 @@ class CampaignController extends Controller
      */
     public function index()
     {
-        $referers = Referer::all();
-        // $campaigns = Campaign::all();
         $campaign = Campaign::find(1);
-
-
-        // return view('campaign/index');
 
         return view('campaign/index', [
           'campaign' => $campaign,
@@ -39,15 +34,11 @@ class CampaignController extends Controller
 
     public function show()
     {
-        $referers = Referer::all();
-
         return view('campaign/show');
     }
 
     public function create()
     {
-        $referers = Referer::all();
-
         return view('campaign/create');
     }
 }

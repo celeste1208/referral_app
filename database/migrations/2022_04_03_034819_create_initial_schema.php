@@ -26,6 +26,8 @@ class CreateInitialSchema extends Migration
             $table->foreignId('campaign_id')->nullable()->constrained();
             $table->string('email')->unique();
             $table->string('promotion_code')->unique();
+            $table->integer('lp_access_count');
+            $table->integer('conversion_count');
             $table->timestamps();
         });
 
