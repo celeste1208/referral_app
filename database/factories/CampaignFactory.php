@@ -15,6 +15,7 @@ class CampaignFactory extends Factory
     {
         return [
             'lp_access_count' => 0,
+            'conversion_count' => 0,
         ];
     }
 }

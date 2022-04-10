@@ -36,13 +36,12 @@
 
       <p>
         <h3>紹介コンバージョン数</h3>
-        2
-
+        {{ $campaign->conversion_count }}
       </p>
 
       <p>
         <h3>LPアクセス数</h3>
-        1
+        {{ $campaign->lp_access_count }}
       </p>
 
       <p>

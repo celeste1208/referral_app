@@ -17,6 +17,7 @@ class CreateInitialSchema extends Migration
             $table->id();
             $table->foreignId('account_id')->nullable()->constrained();
             $table->integer('lp_access_count');
+            $table->integer('conversion_count');
             $table->timestamps();
         });
 
