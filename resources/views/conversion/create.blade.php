@@ -17,54 +17,15 @@
     </div>
     <div>
       コンバージョン作成
-
-      <table class="table">
-        <thead>
-          <tr>
-            <th scope="col">ID</th>
-            <th scope="col">紹介者メールアドレス</th>
-            <th scope="col">被紹介者メールアドレス</th>
-            <th scope="col">ステータス</th>
-            <th scope="col">詳細</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>yamada@hoge.co.jp</td>
-            <td>narumiya@hoge.co.jp</td>
-            <td>承認済み</td>
-            <td>
-              <a href="/conversion/show" role="button">
-                <button type="button" class="btn btn-primary">詳細</button>
-              </a>
-            </td>
-          </tr>
-          <tr>
-            <th scope="row">1</th>
-            <td>yamada@hoge.co.jp</td>
-            <td>narumiya@hoge.co.jp</td>
-            <td>承認済み</td>
-            <td>
-              <a href="/conversion/show" role="button">
-                <button type="button" class="btn btn-primary">詳細</button>
-              </a>
-            </td>
-          </tr>
-          <tr>
-            <th scope="row">1</th>
-            <td>yamada@hoge.co.jp</td>
-            <td>narumiya@hoge.co.jp</td>
-            <td>承認済み</td>
-            <td>
-              <a href="/conversion/show" role="button">
-                <button type="button" class="btn btn-primary">詳細</button>
-              </a>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-
+      <p>
+        紹介者メールアドレス
+        {{ Form::text('referer_mail', 'yamada@hoge.co.jp') }}
+      </p>
+      <p>
+        被紹介者メールアドレス
+        {{ Form::text('referral_mail', 'narumiya@hoge.co.jp') }}
+      </p>
+      {{ Form::submit('送信') }}
     </div>
 </div>
 @endsection
