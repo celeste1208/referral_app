@@ -17,6 +17,7 @@ const html = `
                 overflow: visible !important;
                 flex-wrap: nowrap !important;
                 background: transparent !important;
+                box-shadow: rgb(0 0 0 / 30%) 0px 4px 8px 2px !important;
             }
             #ruhu-iframe {
                 position: relative !important;

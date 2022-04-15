@@ -3,7 +3,9 @@
 namespace App\Http\Controllers\Referrer;
 
 use App\Http\Controllers\Controller;
+use App\Models\Referer;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class DialogController extends Controller
 {
@@ -26,7 +28,7 @@ class DialogController extends Controller
             $referer->save();
         }
 
-        return response()->view('referrer/dialog')
+        return response()->view('referrer/share', ['promotion_code' => $referer->promotion_code])
             ->header('Content-Type', 'application/javascript');
     }
 }
