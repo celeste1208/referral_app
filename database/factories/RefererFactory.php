@@ -4,7 +4,7 @@ namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class CampaignFactory extends Factory
+class RefererFactory extends Factory
 {
     /**
      * Define the model's default state.

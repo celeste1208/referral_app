@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Referer;
-// use App\Models\Campaign;
+use App\Models\Campaign;
 use Illuminate\Http\Request;
 
 class CampaignController extends Controller
@@ -25,24 +25,20 @@ class CampaignController extends Controller
      */
     public function index()
     {
-        $referers = Referer::all();
-        // $campaigns = Campaign::all();
+        $campaign = Campaign::find(1);
 
-
-        return view('campaign/index');
+        return view('campaign/index', [
+          'campaign' => $campaign,
+        ]);
     }
 
     public function show()
     {
-        $referers = Referer::all();
-
         return view('campaign/show');
     }
 
     public function create()
     {
-        $referers = Referer::all();
-
         return view('campaign/create');
     }
 }

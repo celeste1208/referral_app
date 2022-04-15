@@ -26,6 +26,9 @@ class RefererController extends Controller
     {
         $referers = Referer::all();
 
-        return view('referer/index');
+        return view('referer/index', [
+          'referers' => $referers,
+        ]);
+
     }
 }
