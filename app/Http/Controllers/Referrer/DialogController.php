@@ -40,7 +40,7 @@ class DialogController extends Controller
         if (!isset($referer)) {
             $promotionCode = (string)Str::uuid();
             $referer = new Referer();
-            $referer->campaign_id = 1;
+            $referer->campaign_id = $campaign->id;
             $referer->email = $request->email;
             $referer->promotion_code = $promotionCode;
             $referer->save();

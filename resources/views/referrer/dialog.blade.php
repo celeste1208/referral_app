@@ -5,7 +5,7 @@ const body = `
 
         <div class="input-area">
             <div class="text-label">あなたのメールアドレス</div>
-            <input value="hoge@co.jp" class="input-text" id="dialog-input" type="email" placeholder="test@example.com" autocomplete="off" required maxlength="64">
+            <input class="input-text" id="dialog-input" type="email" placeholder="test@example.com" autocomplete="off" required maxlength="64">
         </div>
 
         <label class="checkbox-line" for="terms_policy">
@@ -13,7 +13,7 @@ const body = `
         </label>
 
         <div class="button-area flex">
-            <button class="button button-primary" id="submit-email">紹介リンクを発行する
+            <button class="button button--disabled button-primary" id="submit-email">紹介リンクを発行する
           </div>
         <p class="text-small"><a href="https://relic.co.jp/" target="_blank" rel="noopener">RUFUを利用中</a></p>
 
