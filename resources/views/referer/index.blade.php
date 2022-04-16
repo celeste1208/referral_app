@@ -28,24 +28,14 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>yamada@hoge.co.jp</td>
-            <td>10</td>
-            <td>1000</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>yamada@hoge.co.jp</td>
-            <td>10</td>
-            <td>1000</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>yamada@hoge.co.jp</td>
-            <td>10</td>
-            <td>1000</td>
-          </tr>
+        @foreach($referers as $referer)
+            <tr>
+                <th scope="row">{{$referer->id}}</th>
+                <td>{{$referer->email}}</td>
+                <td>{{$referer->lp_access_count}}</td>
+                <td>{{$referer->conversion_count}}</td>
+            </tr>
+        @endforeach
         </tbody>
       </table>
 

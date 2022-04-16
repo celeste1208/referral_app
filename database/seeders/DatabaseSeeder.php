@@ -21,7 +21,6 @@ class DatabaseSeeder extends Seeder
         Account::factory()->create();
         Campaign::factory()->state(['account_id' => 1])->create();
         User::factory()->create();
-
-
+        Referer::factory()->state(['campaign_id' => 1])->count(10)->create();
     }
 }
