@@ -35,6 +35,7 @@ class CreateInitialSchema extends Migration
             $table->id();
             $table->foreignId('referer_id')->constrained();
             $table->string('email')->unique();
+            $table->integer('incentive_status');
             $table->timestamps();
         });
     }

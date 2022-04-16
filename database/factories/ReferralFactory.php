@@ -15,6 +15,7 @@ class ReferralFactory extends Factory
     {
         return [
             'email' => $this->faker->email(),
+            'incentive_status' => $this->faker->numberBetween(1, 3),
         ];
     }
 }
