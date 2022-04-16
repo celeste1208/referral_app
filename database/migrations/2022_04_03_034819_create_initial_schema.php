@@ -16,8 +16,8 @@ class CreateInitialSchema extends Migration
         Schema::create('campaigns', function (Blueprint $table) {
             $table->id();
             $table->foreignId('account_id')->nullable()->constrained();
-            $table->integer('lp_access_count');
-            $table->integer('conversion_count');
+            $table->integer('lp_access_count')->default(0);
+            $table->integer('conversion_count')->default(0);
             $table->timestamps();
         });
 
@@ -26,8 +26,8 @@ class CreateInitialSchema extends Migration
             $table->foreignId('campaign_id')->nullable()->constrained();
             $table->string('email')->unique();
             $table->string('promotion_code')->unique();
-            $table->integer('lp_access_count');
-            $table->integer('conversion_count');
+            $table->integer('lp_access_count')->default(0);
+            $table->integer('conversion_count')->default(0);
             $table->timestamps();
         });
 
@@ -35,7 +35,7 @@ class CreateInitialSchema extends Migration
             $table->id();
             $table->foreignId('referer_id')->constrained();
             $table->string('email')->unique();
-            $table->integer('incentive_status');
+            $table->integer('incentive_status')->default(\App\Enums\IncentiveStatus::NOT_CONFIRM);
             $table->timestamps();
         });
     }
