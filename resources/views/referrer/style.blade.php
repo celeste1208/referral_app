@@ -27,9 +27,9 @@
         resize: none;
     }
     input:focus {
-        box-shadow: rgb(79 91 255 / 30%) 0px 0px 0px 3px, rgb(79 91 255 / 30%) 0px 0px 0px 1px inset;
+        box-shadow: rgb(128 128 128 / 30%) 0px 0px 0px 3px, rgb(128 128 128 / 30%) 0px 0px 0px 1px inset;
     }
-    
+
     .container {
         background: #fff;
         padding: 16px;
@@ -84,7 +84,7 @@
         min-width: 40px;
     }
     .button.button-primary {
-        background: #4f5bff;
+        background: #{{$color}};
         box-shadow: rgb(0 0 0 / 5%) 0px 0px 2px 1px, rgb(0 0 0 / 8%) 0px 2px 6px, rgb(255 255 255 / 12%) 0px 0px 2px inset;
     }
     .button.button-secondary {

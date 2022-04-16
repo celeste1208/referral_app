@@ -1,9 +1,7 @@
 const body = `
     <div class="container dialog" id="dialog">
-        <div class="text text-center text-bold text-large">いつもご利用いただきありがとうございます！</div>
-        <div class="text">このサービスをより多くの人に届けたく、あなたの大切な友人にご紹介いただけると嬉しいです。
-            あなたが紹介した方が3ヶ月以内に本サービスで支払いを行うと、感謝の気持ちのアマゾンギフトカードをプレゼントします。
-        </div>
+        <div class="text text-center text-bold text-large">{{$dialog_title_text}}</div>
+        <div class="text">{{$dialog_text}}</div>
         <div class="text text-bold">リンクを共有する</div>
         <div class="flex">
             <textarea id="promotion-code" class="promotion-code" wrap="off" disabled>{{ $promotion_code }}</textarea>
@@ -19,7 +17,7 @@ const body = `
             </a>
             <a
                 class="flex social-icon"
-                href="https://twitter.com/intent/tweet?text=このサービスまじでおすすめ%0a登録時にプロモーションコード入れると特典あるわよ%0aコード: {{$promotion_code}}%0aLPサイト:http://127.0.0.1:8000/referral/lp?code={{ $promotion_code }}%0a&url=http://127.0.0.1:8000/referral/top"
+                href="https://twitter.com/intent/tweet?text={{$referral_text}}%0aコード: {{$promotion_code}}%0aLPサイト:http://127.0.0.1:8000/referral/lp?code={{ $promotion_code }}%0a&url=http://127.0.0.1:8000/referral/top"
                 target="_blank"
             >
                 <svg width="28" height="28" viewBox="0 0 100 100"><g transform="translate(-417 -334)"><path d="M120.1,73.642a41.478,41.478,0,0,1-11.782,3.242,20.588,20.588,0,0,0,9.027-11.358,40.767,40.767,0,0,1-13.032,4.98A20.51,20.51,0,0,0,68.818,84.534a20.086,20.086,0,0,0,.53,4.683,58.142,58.142,0,0,1-42.3-21.466,20.575,20.575,0,0,0,6.357,27.421,20.024,20.024,0,0,1-9.3-2.564v.254A20.534,20.534,0,0,0,40.57,112.993a20.652,20.652,0,0,1-5.4.72,19.355,19.355,0,0,1-3.857-.381,20.549,20.549,0,0,0,19.178,14.262A41.134,41.134,0,0,1,25,136.388a41.587,41.587,0,0,1-4.9-.3,57.47,57.47,0,0,0,31.426,9.282c37.762,0,58.4-31.3,58.4-58.445,0-.89-.021-1.78-.064-2.649A42.112,42.112,0,0,0,120.1,73.642Z" transform="translate(396.9 280)"/></g></svg>

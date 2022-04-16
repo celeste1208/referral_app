@@ -9,8 +9,8 @@ const html = `
             #ruhu-wrapper {
                 position: fixed !important;
                 z-index: 9999999999 !important;
-                right: 16px !important;
-                bottom: 16px !important;
+                {{$position == 0 ? 'right' : 'left'}}: {{$side}}px !important;
+                bottom: {{$bottom}}px !important;
                 display: block !important;
                 width: 300px;
                 height: 80px;
