@@ -15,7 +15,10 @@
 - npm run watch
 
 ## テストユーザー
-- メールアドレス: test@email.com
+- Account1
+    - メールアドレス: test@email.com
+- Account2
+    - メールアドレス: test2@email.com
 - パスワード: test1234
 
 # URL
