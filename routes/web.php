@@ -45,5 +45,6 @@ Route::get('/campaign/create', [App\Http\Controllers\CampaignController::class, 
 Route::get('/conversion', [App\Http\Controllers\ConversionController::class, 'index']);
 Route::get('/conversion/show', [App\Http\Controllers\ConversionController::class, 'show']);
 Route::get('/conversion/create', [App\Http\Controllers\ConversionController::class, 'create']);
+Route::post('/conversion/store', [App\Http\Controllers\ConversionController::class, 'store']);
 
 Route::get('/referer', [App\Http\Controllers\RefererController::class, 'index']);
