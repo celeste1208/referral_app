@@ -34,8 +34,7 @@
     }
 
     .input-text:focus {
-      box-shadow: rgb(79 91 255 / 30%) 0px 0px 0px 3px, rgb(79 91 255 / 30%) 0px 0px 0px 1px inset;
-
+        box-shadow: rgb(128 128 128 / 30%) 0px 0px 0px 3px, rgb(128 128 128 / 30%) 0px 0px 0px 1px inset;
     }
 
     .input-text--flex {
@@ -57,6 +56,7 @@
     .text {
         font-size: 14px;
         margin-bottom: 16px;
+        white-space: pre-line;
     }
 
     .text-large {
@@ -65,6 +65,7 @@
         font-weight: 500;
         text-align: center;
         line-height: 24px;
+        white-space: pre-line;
     }
 
     .text-title {
@@ -73,6 +74,7 @@
         font-weight: 500;
         text-align: center;
         margin-bottom: 16px;
+        white-space: pre-line;
     }
 
     .text-small {
@@ -80,6 +82,7 @@
         font-family: 'Noto Sans JP', sans-serif;
         text-align: center;
         margin-bottom: 24px;
+        white-space: pre-line;
     }
 
     .text-label {
@@ -140,7 +143,7 @@
     }
 
     .button-primary {
-        background: #2C538D;
+        background: #{{$color}};
         box-shadow: rgb(0 0 0 / 5%) 0px 0px 2px 1px, rgb(0 0 0 / 8%) 0px 2px 6px, rgb(255 255 255 / 12%) 0px 0px 2px inset;
     }
 

@@ -1,10 +1,7 @@
 const body = `
     <div class="container dialog" id="dialog">
-        <p class="text-title">いつもご利用いただきありがとうございます！</p>
-        <p class="text">
-          このサービスを、より多くの方に使っていただきたいと考えています。そこで、あなたの大切な友人にご紹介いただけると嬉しいです。<br>
-          あなたが紹介した方が、3ヶ月以内に本サービスで支払いを行うと、○○○より、感謝の気持ちのアマゾンギフトカードをプレゼントします。
-        </p>
+        <p class="text-title">{{$dialog_title_text}}</p>
+        <p class="text">{{$dialog_text}}</p>
 
         <div class="input-area">
             <div class="text-label">あなたのメールアドレス</div>

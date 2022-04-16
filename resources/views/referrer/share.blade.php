@@ -1,14 +1,11 @@
 const body = `
     <div class="container dialog" id="dialog">
-        <p class="text-title">いつもご利用いただきありがとうございます！</p>
-        <p class="text">
-            このサービスを、より多くの方に使っていただきたいと考えています。そこで、あなたの大切な友人にご紹介いただけると嬉しいです。<br>
-            あなたが紹介した方が、3ヶ月以内に本サービスで支払いを行うと、○○○より、感謝の気持ちのアマゾンギフトカードをプレゼントします。
-        </p>
+        <p class="text-title">{{$dialog_title_text}}</p>
+        <p class="text">{{$dialog_text}}</p>
         <div class="input-area">
             <div class="text-label">リンクを共有する</div>
             <div class="flex">
-                <input value={{ $promotion_code }} class="input-text input-text--flex promotion-code" id="promotion-code" type="text">
+                <input value="http://127.0.0.1:8000/referral/lp?code={{ $promotion_code }}" class="input-text input-text--flex promotion-code" id="promotion-code" type="text">
                 <button class="button button-primary button-small" id="copy-code">コピー</button>
             </div>
         </div>
@@ -23,7 +20,7 @@ const body = `
             </a>
             <a
                 class="social-icon social-icon__twitter"
-                href="https://twitter.com/intent/tweet?text=このサービスまじでおすすめ%0a登録時にプロモーションコード入れると特典あるわよ%0aコード: {{$promotion_code}}%0aLPサイト:http://127.0.0.1:8000/referral/lp?code={{ $promotion_code }}%0a&url=http://127.0.0.1:8000/referral/top"
+                href="https://twitter.com/intent/tweet?text={{$referral_text}}%0aコード: {{$promotion_code}}%0aLPサイト:http://127.0.0.1:8000/referral/lp?code={{ $promotion_code }}%0a&url=http://127.0.0.1:8000/referral/top"
                 target="_blank"
                 rel="noopener"
             >
