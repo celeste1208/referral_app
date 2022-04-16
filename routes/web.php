@@ -48,3 +48,10 @@ Route::get('/conversion/create', [App\Http\Controllers\ConversionController::cla
 Route::post('/conversion/store', [App\Http\Controllers\ConversionController::class, 'store']);
 
 Route::get('/referer', [App\Http\Controllers\RefererController::class, 'index']);
+
+Route::get('/privacyPolicy', function () {
+  return view('others.privacyPolicy');
+});
+Route::get('/terms', function () {
+  return view('others.terms');
+});

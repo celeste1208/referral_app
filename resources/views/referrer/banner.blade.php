@@ -1,6 +1,6 @@
 const body = `
     <div class="container flex flex-column pointer" id="banner">
-        <div class="text text-bold text-large text-center">{{$banner_text}}</div>
+        <p class="text-large">{{$banner_text}}</p>
     </div>
 `;
 

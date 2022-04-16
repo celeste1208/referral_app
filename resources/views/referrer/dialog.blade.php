@@ -1,32 +1,71 @@
 const body = `
     <div class="container dialog" id="dialog">
-        <div class="text text-center text-bold text-large">{{$dialog_title_text}}</div>
-        <div class="text">{{$dialog_text}}</div>
-        <div class="text text-bold">あなたのメールアドレスを入力して紹介する</div>
-        <input id="dialog-input" type="email" placeholder="test@example.com" autocomplete="off" required maxlength="64">
-        <div class="flex">
-            <button class="button--disabled button-primary" id="submit-email">紹介する</button>
+        <p class="text-title">{{$dialog_title_text}}</p>
+        <p class="text">{{$dialog_text}}</p>
+
+        <div class="input-area">
+            <div class="text-label">あなたのメールアドレス</div>
+            <input value="hoge@co.jp" class="input-text" id="dialog-input" type="email" placeholder="test@example.com" autocomplete="off" required maxlength="64">
         </div>
+
+        <label class="checkbox-line" for="terms_policy">
+          <input type="checkbox" id="terms_policy"><a href="http://127.0.0.1:8000/privacyPolicy" target="_blank" rel="noopener">プライバシーポリシー</a>と<a href="http://127.0.0.1:8000/terms" target="_blank" rel="noopener">利用規約</a>に同意する
+        </label>
+
+        <div class="button-area flex">
+            <button class="button button-primary" id="submit-email">紹介リンクを発行する
+          </div>
+        <p class="text-small"><a href="https://relic.co.jp/" target="_blank" rel="noopener">RUFUを利用中</a></p>
+
     </div>
 `;
 
 const wrapper = document.getElementById('ruhu-wrapper');
-wrapper.style.setProperty('width', '400px');
-wrapper.style.setProperty('height', '320px');
+wrapper.style.setProperty('width', '500px');
+wrapper.style.setProperty('height', '440px');
 
 doc.body.innerHTML = body;
 
 const input = doc.getElementById('dialog-input');
+const terms_policy = doc.getElementById('terms_policy');
 const submitButton = doc.getElementById('submit-email');
+
+let valid_input = false;
+let valid_checkbox = false;
+let valid_form = false;
+
+var form_validation = function() {
+  if(valid_input && valid_checkbox) {
+    valid_form = true;
+  } else {
+    valid_form = false;
+  }
+
+  if(valid_form) {
+    submitButton.classList.remove('button--disabled');
+  } else {
+    submitButton.classList.add('button--disabled');
+  }
+}
+
 input.addEventListener('input', () => {
     if (/.+@.+\..+/.test(input.value)) {
-        submitButton.classList.add('button');
-        submitButton.classList.remove('button--disabled');
+      valid_input = true;
     } else {
-        submitButton.classList.add('button--disabled');
-        submitButton.classList.remove('button');
+      valid_input = false;
     }
+    form_validation();
 })
+
+terms_policy.addEventListener('input', () => {
+    if (terms_policy.checked) {
+        valid_checkbox = true;
+    } else {
+      valid_checkbox = false;
+    }
+    form_validation();
+})
+
 submitButton.addEventListener('click', () => {
     if (!submitButton.classList.contains('button--disabled')) {
         const xhr = new XMLHttpRequest();
