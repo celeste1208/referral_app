@@ -1,7 +1,9 @@
 const body = `
     <div class="container flex flex-column pointer" id="banner">
-        <div class="text-bold text-large">サービスを紹介いただいた方に</div>
-        <div class="text-bold text-large">アマギフプレゼント中！</div>
+        <p class="text-large">
+          サービスを紹介いただいた方に<br>
+          アマギフプレゼント中！
+        </p>
     </div>
 `;
 

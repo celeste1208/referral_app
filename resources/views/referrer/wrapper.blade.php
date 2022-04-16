@@ -12,12 +12,18 @@ const html = `
                 right: 16px !important;
                 bottom: 16px !important;
                 display: block !important;
-                width: 300px;
+                width: 290px;
                 height: 80px;
                 overflow: visible !important;
                 flex-wrap: nowrap !important;
-                background: transparent !important;
-                box-shadow: rgb(0 0 0 / 30%) 0px 4px 8px 2px !important;
+                /* background: transparent !important; */
+                background: #FFF !important;
+                /* padding: 16px; */
+
+                /* box-shadow: rgb(0 0 0 / 30%) 0px 4px 8px 2px !important; */
+                box-shadow: 0px 4px 16px 3px rgba(34, 34, 34, 0.13), 0px 4px 10px 2px rgba(34, 34, 34, 0.12), 0px 6px 17px -7px rgba(34, 34, 34, 0.2);
+
+                border-radius: 12px;
             }
             #ruhu-iframe {
                 position: relative !important;
