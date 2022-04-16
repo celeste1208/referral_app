@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\Account;
 use App\Models\Campaign;
+use App\Models\Referral;
 use App\Models\User;
 use App\Models\Referer;
 
@@ -21,6 +22,10 @@ class DatabaseSeeder extends Seeder
         Account::factory()->create();
         Campaign::factory()->state(['account_id' => 1])->create();
         User::factory()->create();
-        Referer::factory()->state(['campaign_id' => 1])->count(10)->create();
+        Referer::factory()
+            ->has(Referral::factory()->count(3))
+            ->state(['campaign_id' => 1])
+            ->count(10)
+            ->create();
     }
 }

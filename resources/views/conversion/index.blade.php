@@ -32,6 +32,21 @@
           </tr>
         </thead>
         <tbody>
+        @foreach($referers as $referer)
+            @foreach($referer->referrals as $referral)
+            <tr>
+                <th scope="row">{{$referral->id}}</th>
+                <td>{{$referer->email}}</td>
+                <td>{{$referral->email}}</td>
+                <td>承認済み</td>
+                <td>
+                    <a href="/conversion/show" role="button">
+                        <button type="button" class="btn btn-primary">詳細</button>
+                    </a>
+                </td>
+            </tr>
+            @endforeach
+        @endforeach
           <tr>
             <th scope="row">1</th>
             <td>yamada@hoge.co.jp</td>
