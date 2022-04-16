@@ -1,10 +1,13 @@
 `<style>
+    @import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
+
     body {
         font-family: sans-serif;
         font-size: 90%;
         padding: 0;
         margin: 0;
         user-select: none;
+        background-color: transparent; */
     }
     body * {
         box-sizing: border-box;
@@ -15,7 +18,7 @@
     a {
         text-decoration: none;
     }
-    input, textarea {
+    /* input, textarea {
         width: 100%;
         height: 40px;
         padding: 10px 12px;
@@ -25,32 +28,96 @@
         transition-timing-function: cubic-bezier(0.3, 0, 0, 1);
         transition-duration: 150ms;
         resize: none;
+    } */
+
+    .input-text {
+        width: 100%;
+        height: 40px;
+        padding: 10px 12px;
+        border: 1px solid #808080;
+        border-radius: 8px;
+        outline: none;
+        transition-timing-function: cubic-bezier(0.3, 0, 0, 1);
+        transition-duration: 150ms;
+        resize: none;
+
     }
-    input:focus {
+    /* input:focus {
         box-shadow: rgb(79 91 255 / 30%) 0px 0px 0px 3px, rgb(79 91 255 / 30%) 0px 0px 0px 1px inset;
+    } */
+    .input-text:focus {
+      box-shadow: rgb(79 91 255 / 30%) 0px 0px 0px 3px, rgb(79 91 255 / 30%) 0px 0px 0px 1px inset;
+
     }
-    
+
     .container {
-        background: #fff;
         padding: 16px;
         width: 100%;
         height: 100%;
-        border-radius: 8px;
     }
+    .dialog {
+        padding: 26px;
+        width: 100%;
+        height: 100%;
+    }
+
     .text {
-        overflow-wrap: break-word;
+        /* overflow-wrap: break-word;
         white-space: pre-line;
-        word-break: break-word;
+        word-break: break-word; */
+        font-size: 14px;
+        margin-bottom: 16px;
+
+
     }
-    .text-bold {
+    /* .text-bold {
         font-weight: bold;
-    }
+    } */
     .text-large {
-        font-size: 120%;
-    }
-    .text-center {
+        font-size: 16px;
+        font-family: 'Noto Sans JP', sans-serif;
+        font-weight: 500;
         text-align: center;
+        line-height: 24px;
     }
+    .text-title {
+        font-size: 16px;
+        font-family: 'Noto Sans JP', sans-serif;
+        font-weight: 500;
+        text-align: center;
+        margin-bottom: 16px;
+    }
+    .text-small {
+        font-size: 12px;
+        font-family: 'Noto Sans JP', sans-serif;
+        text-align: center;
+        margin-bottom: 24px;
+
+    }
+
+    .text-label {
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+
+    .input-text {
+      margin-bottom: 16px;
+    }
+
+    .button-area {
+      margin-bottom: 24px;
+
+    }
+
+    .checkbox-line {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 24px;
+
+
+    }
+
     .flex {
         display: flex;
         justify-content: center;
@@ -69,8 +136,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        min-width: 80px;
-        height: 40px;
+        min-width: 172px;
+        height: 46px;
         padding: 8px;
         border-radius: 8px;
         color: #fff;
@@ -84,7 +151,8 @@
         min-width: 40px;
     }
     .button.button-primary {
-        background: #4f5bff;
+      /* 2C538D */
+        background: #2C538D;
         box-shadow: rgb(0 0 0 / 5%) 0px 0px 2px 1px, rgb(0 0 0 / 8%) 0px 2px 6px, rgb(255 255 255 / 12%) 0px 0px 2px inset;
     }
     .button.button-secondary {
@@ -115,9 +183,5 @@
     }
     .social-icon:hover * {
         fill: #303030;
-    }
-
-    .dialog > * {
-        margin-bottom: 12px;
     }
 </style>`
