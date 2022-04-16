@@ -13,4 +13,9 @@ class Referer extends Model
     {
         return $this->hasMany(Referral::class);
     }
+
+    public function campaign()
+    {
+        return $this->belongsTo(Campaign::class);
+    }
 }
