@@ -15,7 +15,7 @@ const body = `
         <div class="flex">
             <a
                 class="social-icon social-icon__facebook"
-                href="https://www.facebook.com/share.php?u=http://127.0.0.1:8000/referral/lp"
+                href="https://www.facebook.com/share.php?u=http://127.0.0.1:8000/referral/lp?code={{ $promotion_code }}"
                 target="_blank"
                 rel="noopener"
             >
@@ -23,7 +23,7 @@ const body = `
             </a>
             <a
                 class="social-icon social-icon__twitter"
-                href="https://twitter.com/intent/tweet?text=このサービスまじでおすすめ%0a登録時にプロモーションコード入れると特典あるわよ%0aコード: {{$promotion_code}}%0aLPサイト:http://127.0.0.1:8000/referral/lp%0a&url=http://127.0.0.1:8000/referral/top"
+                href="https://twitter.com/intent/tweet?text=このサービスまじでおすすめ%0a登録時にプロモーションコード入れると特典あるわよ%0aコード: {{$promotion_code}}%0aLPサイト:http://127.0.0.1:8000/referral/lp?code={{ $promotion_code }}%0a&url=http://127.0.0.1:8000/referral/top"
                 target="_blank"
                 rel="noopener"
             >
@@ -39,7 +39,7 @@ const body = `
             </a>
             <a
                 class="social-icon social-icon__line"
-                href="https://social-plugins.line.me/lineit/share?url=http://127.0.0.1:8000/referral/lp"
+                href="https://social-plugins.line.me/lineit/share?url=http://127.0.0.1:8000/referral/lp?code={{ $promotion_code }}"
                 target="_blank"
                 rel="noopener"
             >

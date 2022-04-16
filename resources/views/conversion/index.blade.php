@@ -19,39 +19,21 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>yamada@hoge.co.jp</td>
-            <td>narumiya@hoge.co.jp</td>
-            <td>承認済み</td>
-            <td>
-              <a href="/conversion/show" role="button">
-                <button type="button" class="btn btn-primary">詳細</button>
-              </a>
-            </td>
-          </tr>
-          <tr>
-            <th scope="row">1</th>
-            <td>yamada@hoge.co.jp</td>
-            <td>narumiya@hoge.co.jp</td>
-            <td>承認済み</td>
-            <td>
-              <a href="/conversion/show" role="button">
-                <button type="button" class="btn btn-primary">詳細</button>
-              </a>
-            </td>
-          </tr>
-          <tr>
-            <th scope="row">1</th>
-            <td>yamada@hoge.co.jp</td>
-            <td>narumiya@hoge.co.jp</td>
-            <td>承認済み</td>
-            <td>
-              <a href="/conversion/show" role="button">
-                <button type="button" class="btn btn-primary">詳細</button>
-              </a>
-            </td>
-          </tr>
+        @foreach($referers as $referer)
+            @foreach($referer->referrals as $referral)
+            <tr>
+                <th scope="row">{{$referral->id}}</th>
+                <td>{{$referer->email}}</td>
+                <td>{{$referral->email}}</td>
+                <td>{{\App\Enums\IncentiveStatus::getDescription($referral->incentive_status)}}</td>
+                <td>
+                    <a href="/conversion/show" role="button">
+                        <button type="button" class="btn btn-primary">詳細</button>
+                    </a>
+                </td>
+            </tr>
+            @endforeach
+        @endforeach
         </tbody>
       </table>
 

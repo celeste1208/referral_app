@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Referer;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Log;
 
 class RefererController extends Controller
 {
@@ -24,7 +26,8 @@ class RefererController extends Controller
      */
     public function index()
     {
-        $referers = Referer::all();
+        $user = Auth::user();
+        $referers = Referer::where(['campaign_id' => $user->account->campaign->id])->get();
 
         return view('referer/index', [
           'referers' => $referers,

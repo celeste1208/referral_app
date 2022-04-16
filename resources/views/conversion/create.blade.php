@@ -5,14 +5,27 @@
     <div>
       コンバージョン作成
       <p>
-        紹介者メールアドレス
-        {{ Form::text('referer_mail', 'yamada@hoge.co.jp') }}
+        被紹介者メールアドレス
+        {{ Form::text('email', 'yamada@hoge.co.jp') }}
       </p>
       <p>
-        被紹介者メールアドレス
-        {{ Form::text('referral_mail', 'narumiya@hoge.co.jp') }}
+        プロモーションコード
+        {{ Form::text('promotion_code', 'code') }}
       </p>
       {{ Form::submit('送信') }}
+
+        <form action="/conversion/store" method="post">
+            @csrf
+            <p>
+                被紹介者メールアドレス
+                <input type="text" name="email" placeholder="yamada@hoge.co.jp">
+            </p>
+            <p>
+                プロモーションコード
+                <input type="text" name="promotion_code" placeholder="code">
+            </p>
+            <button>送信</button>
+        </form>
     </div>
 </div>
 @endsection
