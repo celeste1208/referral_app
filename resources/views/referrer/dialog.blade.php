@@ -7,7 +7,7 @@ const body = `
         <div class="text text-bold">あなたのメールアドレスを入力して紹介する</div>
         <input id="dialog-input" type="email" placeholder="test@example.com" autocomplete="off" required maxlength="64">
         <div class="flex">
-            <button class="button--disabled button-primary" id="submit-email">紹介する</div>
+            <button class="button--disabled button-primary" id="submit-email">紹介する</button>
         </div>
     </div>
 `;
