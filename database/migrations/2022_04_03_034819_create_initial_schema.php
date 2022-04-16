@@ -34,6 +34,7 @@ class CreateInitialSchema extends Migration
         Schema::create('referrals', function (Blueprint $table) {
             $table->id();
             $table->foreignId('referer_id')->constrained();
+            $table->string('email')->unique();
             $table->timestamps();
         });
     }

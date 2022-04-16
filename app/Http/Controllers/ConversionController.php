@@ -26,7 +26,9 @@ class ConversionController extends Controller
     {
         $referers = Referer::all();
 
-        return view('conversion/index');
+        return view('conversion/index', [
+            'referers' => $referers,
+        ]);
     }
 
     public function show()

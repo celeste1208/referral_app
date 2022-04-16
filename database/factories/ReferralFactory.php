@@ -4,7 +4,7 @@ namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class CampaignFactory extends Factory
+class ReferralFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -14,8 +14,7 @@ class CampaignFactory extends Factory
     public function definition()
     {
         return [
-            'lp_access_count' => $this->faker->randomNumber(),
-            'conversion_count' => $this->faker->randomNumber(),
+            'email' => $this->faker->email(),
         ];
     }
 }
