@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Enums\IncentiveStatus;
 use App\Models\Referer;
+use App\Models\Referral;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Log;
 
 class ConversionController extends Controller
 {
@@ -45,5 +48,21 @@ class ConversionController extends Controller
         $referers = Referer::all();
 
         return view('conversion/create');
+    }
+
+    public function store(Request $request)
+    {
+        $referer = Referer::where(['promotion_code' => $request->promotion_code])->first();
+        $referral = new Referral();
+        $referral->referer_id = $referer->id;
+        $referral->email = $request->email;
+        $referral->incentive_status = IncentiveStatus::NOT_CONFIRM;
+        $referral->save();
+
+        $user = Auth::user();
+        $referers = Referer::where(['campaign_id' => $user->account->campaign->id])->get();
+        return view('conversion/index', [
+            'referers' => $referers,
+        ]);
     }
 }
