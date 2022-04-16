@@ -26,7 +26,9 @@ class CampaignController extends Controller
      */
     public function index()
     {
-        $campaign = Campaign::find(1);
+        $user = Auth::user();
+
+        $campaign = Campaign::where(['account_id' => $user->account->id])->first();
 
         return view('campaign/index', [
           'campaign' => $campaign,
