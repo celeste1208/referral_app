@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Str;
 
 class RefererFactory extends Factory
 {
@@ -14,8 +15,10 @@ class RefererFactory extends Factory
     public function definition()
     {
         return [
-            'lp_access_count' => 0,
-            'conversion_count' => 0,
+            'email' => $this->faker->email(),
+            'promotion_code' => (string)Str::uuid(),
+            'lp_access_count' => $this->faker->randomNumber(),
+            'conversion_count' => $this->faker->randomNumber(),
         ];
     }
 }
