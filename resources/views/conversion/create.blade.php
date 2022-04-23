@@ -17,16 +17,6 @@
     </div>
     <div>
       コンバージョン作成
-      <p>
-        被紹介者メールアドレス
-        {{ Form::text('email', 'yamada@hoge.co.jp') }}
-      </p>
-      <p>
-        プロモーションコード
-        {{ Form::text('promotion_code', 'code') }}
-      </p>
-      {{ Form::submit('送信') }}
-
         <form action="/conversion/store" method="post">
             @csrf
             <p>

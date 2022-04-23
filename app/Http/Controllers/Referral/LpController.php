@@ -13,7 +13,9 @@ class LpController extends Controller
     {
         $promotionCode = $request->code;
         $referer = Referer::where('promotion_code', $promotionCode)->first();
-        $campaign = $referer->campaign;
+        $referer->lp_access_count += 1;
+        $referer->save();
+        $campaign = Campaign::find($referer->campaign->id);
         $campaign->lp_access_count += 1;
         $campaign->save();
         return redirect()->away($campaign->lp_url);

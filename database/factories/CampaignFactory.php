@@ -16,7 +16,7 @@ class CampaignFactory extends Factory
         return [
             'lp_access_count' => $this->faker->randomNumber(),
             'conversion_count' => $this->faker->randomNumber(),
-            'lp_url' => 'http://127.0.0.1:8000/referral/lp',
+            'lp_url' => 'https://relic.co.jp/services/throttle/',
         ];
     }
 }
