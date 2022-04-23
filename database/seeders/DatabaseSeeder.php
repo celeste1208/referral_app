@@ -21,10 +21,18 @@ class DatabaseSeeder extends Seeder
     {
         Account::factory()->count(2)->create();
         Campaign::factory()
-            ->state(['account_id' => 1])
+            ->state([
+                'account_id' => 1,
+                'lp_url' => 'https://example.com',
+                'hostname' => 'https://example.com'
+            ])
             ->create();
         Campaign::factory()
-            ->state(['account_id' => 2])
+            ->state([
+                'account_id' => 2,
+                'lp_url' => 'https://example.com',
+                'hostname' => 'https://example.com'
+            ])
             ->create();
         User::factory()
             ->state([

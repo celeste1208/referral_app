@@ -75,13 +75,8 @@
             </div>
         </nav>
 
-        <main class="py-4 row">
-          <div class="col-2">
-            <p>aaaa</p>
-            <p>iii</p>
-
-          </div>
-          <div class="col">
+        <main class="py-4">
+          <div>
             @yield('content')
           </div>
         </main>
